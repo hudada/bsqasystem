@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/top_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/the_space"
+        android:layout_marginLeft="@dimen/the_space"
+        android:layout_marginTop="@dimen/the_space">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="问题关键字："
+            android:textColor="@color/text_3"
+            android:textSize="@dimen/text_size03"
+            />
+        <EditText
+            android:id="@+id/et_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="@dimen/text_size02"
+            android:textColor="@color/text_6"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:hint="请输入问题关键字..."
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/the_space"
+            android:text="状态："
+            android:textColor="@color/text_3"
+            android:textSize="@dimen/text_size03" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_01"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:gravity="center_vertical"
+                android:text="全部"
+                android:textColor="@color/text_3"
+                android:textSize="@dimen/text_size01" />
+
+            <RadioButton
+                android:id="@+id/rb_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="待解决"
+                android:textColor="@color/text_3"
+                android:textSize="@dimen/text_size01" />
+
+            <RadioButton
+                android:id="@+id/rb_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="解决中"
+                android:textColor="@color/text_3"
+                android:textSize="@dimen/text_size01" />
+
+            <RadioButton
+                android:id="@+id/rb_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="已解决"
+                android:textColor="@color/text_3"
+                android:textSize="@dimen/text_size01" />
+        </RadioGroup>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/btn_qe"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/blue_bg"
+        android:text="开始查询"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size03"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_9" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/sl_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

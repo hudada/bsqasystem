@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:paddingRight="@dimen/the_space">
+
+    <TextView
+        android:id="@+id/tv_01"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/the_space"
+        android:layout_toLeftOf="@+id/iv_img"
+        android:gravity="center_vertical"
+        android:text="发布者"
+        android:textColor="@color/text_6"
+        android:textSize="@dimen/text_size02" />
+
+    <TextView
+        android:id="@+id/tv_03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_01"
+        android:layout_marginLeft="@dimen/the_space"
+        android:layout_toLeftOf="@+id/iv_img"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:text="内容"
+        android:textColor="@color/text_12"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tv_03"
+        android:layout_marginBottom="@dimen/the_space"
+        android:layout_marginLeft="@dimen/the_space"
+        android:layout_toLeftOf="@+id/iv_img"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:text="2018-2-2 12:12:12"
+        android:textColor="@color/text_12"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/text_9" />
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

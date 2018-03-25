@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/the_space"
+        android:layout_marginRight="@dimen/the_space"
+        android:layout_marginTop="@dimen/the_space"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="问题类型(请选择)："
+            android:textColor="@color/text_3"
+            android:textSize="@dimen/text_size03" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="5dp"
+                android:checked="true"
+                android:text="工作"
+                android:textColor="@color/text_3"
+                android:textSize="@dimen/text_size02" />
+
+            <RadioButton
+                android:id="@+id/rb_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:text="绩效考核"
+                android:textColor="@color/text_3"
+                android:textSize="@dimen/text_size02" />
+
+            <RadioButton
+                android:id="@+id/rb_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="5dp"
+                android:text="考勤"
+                android:textColor="@color/text_3"
+                android:textSize="@dimen/text_size02" />
+
+            <RadioButton
+                android:id="@+id/rb_04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="5dp"
+                android:text="其它"
+                android:textColor="@color/text_3"
+                android:textSize="@dimen/text_size02" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/the_space"
+        android:layout_marginRight="@dimen/the_space"
+        android:layout_marginTop="@dimen/the_space"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="问题地点："
+            android:textColor="@color/text_3"
+            android:textSize="@dimen/text_size03" />
+
+        <EditText
+            android:id="@+id/et_addr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入发生地点..."
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textColor="@color/text_6"
+            android:textSize="@dimen/text_size02" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/the_space"
+        android:layout_marginRight="@dimen/the_space"
+        android:layout_marginTop="@dimen/the_space"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发生时间："
+            android:textColor="@color/text_3"
+            android:textSize="@dimen/text_size03" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_04"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:text="2018-12-12"
+                android:textColor="@color/text_6"
+                android:textSize="@dimen/text_size03" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="▼"
+                android:textColor="@color/text_9"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/the_space"
+                android:text="16:40:22"
+                android:textColor="@color/text_6"
+                android:textSize="@dimen/text_size03" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="▼"
+                android:textColor="@color/text_9"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/the_space"
+        android:layout_marginRight="@dimen/the_space"
+        android:layout_marginTop="@dimen/the_space"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="问题描述："
+            android:textColor="@color/text_3"
+            android:textSize="@dimen/text_size03" />
+
+        <EditText
+            android:id="@+id/et_info"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/radius_edit01"
+            android:gravity="top|left"
+            android:hint="请输入问题描述..."
+            android:padding="2dp"
+            android:textColor="@color/text_6"
+            android:textSize="@dimen/text_size02" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/the_space"
+        android:layout_marginRight="@dimen/the_space"
+        android:layout_marginTop="@dimen/the_space"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="相关图片："
+            android:textColor="@color/text_3"
+            android:textSize="@dimen/text_size03" />
+
+        <ImageView
+            android:id="@+id/iv_update_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/img_add" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@color/blue_bg"
+        android:text="提交问题"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size04"
+        android:textStyle="bold" />
+</LinearLayout>
